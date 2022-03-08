@@ -56,7 +56,7 @@
 						<div class="contact100-form-checkbox">
 							<h6 style="color:gray; text-align:center;" class="" for="ckb1">
 								Sudah Punya Akun?
-                                <a href="register.php" class="txt1">
+                                <a href="index.php" class="txt1">
 								Masuk Disini
 					    		</a>
                             </h6>

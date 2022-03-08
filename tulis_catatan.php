@@ -248,127 +248,227 @@ if(empty( $_SESSION['nik'])){ ?>
                 </div>
             </div>
         </div>        
-        <div class="app-main">
-                <div class="app-sidebar sidebar-shadow">
-                    <div class="app-header__logo">
-                        <div class="logo-src"></div>
-                        <div class="header__pane ml-auto">
+            <div class="app-main">
+                    <div class="app-sidebar sidebar-shadow">
+                        <div class="app-header__logo">
+                            <div class="logo-src"></div>
+                            <div class="header__pane ml-auto">
+                                <div>
+                                    <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                        <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-header__mobile-menu">
                             <div>
-                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
                                     <span class="hamburger-box">
                                         <span class="hamburger-inner"></span>
                                     </span>
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="app-header__mobile-menu">
-                        <div>
-                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="app-header__menu">
-                        <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
-                        </span>
-                    </div>    <div class="scrollbar-sidebar">
-                        <div class="app-sidebar__inner">
-                            <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Menu</li>
-                                <li>
-                                    <a href="user.php" >
-                                        <i class="metismenu-icon pe-7s-monitor"></i>
-                                        Dashboard
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tulis_catatan.php" >
-                                        <i class="metismenu-icon pe-7s-pen"></i>
-                                        Tulis Catatan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="catatan_perjalanan.php" >
-                                        <i class="metismenu-icon pe-7s-folder"></i>
-                                        Catatan Perjalanan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="logout.php" >
-                                        <i class="metismenu-icon pe-7s-next-2"></i>
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>    
-                <div class="app-main__outer">
-                    <div class="app-main__inner">
-                        <div class="app-page-title">
-                            <div class="page-title-wrapper">
-                                <div class="page-title-heading">
-                                    <div class="page-title-icon">
-                                        <a href="user.php">
-                                            <i class="pe-7s-notebook"></i>
+                        <div class="app-header__menu">
+                            <span>
+                                <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                    <span class="btn-icon-wrapper">
+                                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                    </span>
+                                </button>
+                            </span>
+                        </div>    <div class="scrollbar-sidebar">
+                            <div class="app-sidebar__inner">
+                                <ul class="vertical-nav-menu">
+                                    <li class="app-sidebar__heading">Menu</li>
+                                    <li>
+                                        <a href="user.php" >
+                                            <i class="metismenu-icon pe-7s-monitor"></i>
+                                            Dashboard
                                         </a>
-                                    </div>
-                                    <div><a href=""> Peduli Diri </a>
-                                        <div class="page-title-subheading">
-                                            <?php 
-                                            echo "Selamat Datang ".$_SESSION['nama_lengkap']. " Di Aplikasi Peduli Diri"; 
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>            
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="card mb-3 widget-content">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left">
-                                                <div class="widget-heading">
-                                                    <a href="tulis_catatan"> Tulis Catatan</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="card mb-3 widget-content">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left">
-                                                <div class="widget-heading">
-                                                    <a href="catatan_perjalanan"> Catatan Perjalanan</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-wrapper-footer">
-                        <div class="app-footer">
-                            <div class="app-footer__inner">
-                                <div class="app-footer-left">
-                                     <a href="">&copy; Mohammad Reihan Zakya Alawi </a>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <a href="tulis_catatan.php" >
+                                            <i class="metismenu-icon pe-7s-pen"></i>
+                                            Tulis Catatan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="catatan_perjalanan.php" >
+                                            <i class="metismenu-icon pe-7s-folder"></i>
+                                            Catatan Perjalanan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="logout.php" >
+                                            <i class="metismenu-icon pe-7s-next-2"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>    
-                </div>
+                    <div class="app-main__outer">
+                        <div class="app-main__inner">
+                            <div class="app-page-title">
+                                <div class="page-title-wrapper">
+                                    <div class="page-title-heading">
+                                        <div class="page-title-icon">
+                                            <i class="pe-7s-graph text-success">
+                                            </i>
+                                        </div>
+                                        <div>Form Layouts
+                                            <div class="page-title-subheading">Build whatever layout you need with our Architect framework.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page-title-actions">
+                                        <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
+                                            <i class="fa fa-star"></i>
+                                        </button>
+                                        <div class="d-inline-block dropdown">
+                                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
+                                                <span class="btn-icon-wrapper pr-2 opacity-7">
+                                                    <i class="fa fa-business-time fa-w-20"></i>
+                                                </span>
+                                                Buttons
+                                            </button>
+                                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a href="javascript:void(0);" class="nav-link">
+                                                            <i class="nav-link-icon lnr-inbox"></i>
+                                                            <span>
+                                                                Inbox
+                                                            </span>
+                                                            <div class="ml-auto badge badge-pill badge-secondary">86</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="javascript:void(0);" class="nav-link">
+                                                            <i class="nav-link-icon lnr-book"></i>
+                                                            <span>
+                                                                Book
+                                                            </span>
+                                                            <div class="ml-auto badge badge-pill badge-danger">5</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="javascript:void(0);" class="nav-link">
+                                                            <i class="nav-link-icon lnr-picture"></i>
+                                                            <span>
+                                                                Picture
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a disabled href="javascript:void(0);" class="nav-link disabled">
+                                                            <i class="nav-link-icon lnr-file-empty"></i>
+                                                            <span>
+                                                                File Disabled
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>            
+                            <div class="tab-content">
+                                <div>
+                                    <div class="main-card mb-3 card">
+                                        <div class="card-body"><h5 class="card-title">Grid</h5>
+                                            <form class="">
+                                                <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Email</label>
+                                                    <div class="col-sm-10"><input name="email" id="exampleEmail" placeholder="with a placeholder" type="email" class="form-control"></div>
+                                                </div>
+                                                <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Password</label>
+                                                    <div class="col-sm-10"><input name="password" id="examplePassword" placeholder="password placeholder" type="password" class="form-control"></div>
+                                                </div>
+                                                <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Select</label>
+                                                    <div class="col-sm-10"><select name="select" id="exampleSelect" class="form-control"></select></div>
+                                                </div>
+                                                <div class="position-relative row form-group"><label for="exampleSelectMulti" class="col-sm-2 col-form-label">Select Multiple</label>
+                                                    <div class="col-sm-10"><select multiple="" name="selectMulti" id="exampleSelectMulti" class="form-control"></select></div>
+                                                </div>
+                                                <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Text Area</label>
+                                                    <div class="col-sm-10"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                                </div>
+                                                <div class="position-relative row form-group"><label for="exampleFile" class="col-sm-2 col-form-label">File</label>
+                                                    <div class="col-sm-10"><input name="file" id="exampleFile" type="file" class="form-control-file">
+                                                        <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                                    </div>
+                                                </div>
+                                                <fieldset class="position-relative row form-group">
+                                                    <legend class="col-form-label col-sm-2">Radio Buttons</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="position-relative form-check"><label class="form-check-label"><input name="radio2" type="radio" class="form-check-input"> Option one is this and that—be sure to include why it's great</label></div>
+                                                        <div class="position-relative form-check"><label class="form-check-label"><input name="radio2" type="radio" class="form-check-input"> Option two can be something else and selecting it will deselect option
+                                                            one</label></div>
+                                                        <div class="position-relative form-check disabled"><label class="form-check-label"><input name="radio2" disabled="" type="radio" class="form-check-input"> Option three is disabled</label></div>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="position-relative row form-group"><label for="checkbox2" class="col-sm-2 col-form-label">Checkbox</label>
+                                                    <div class="col-sm-10">
+                                                        <div class="position-relative form-check"><label class="form-check-label"><input id="checkbox2" type="checkbox" class="form-check-input"> Check me out</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-relative row form-check">
+                                                    <div class="col-sm-10 offset-sm-2">
+                                                        <button class="btn btn-secondary">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-wrapper-footer">
+                            <div class="app-footer">
+                                <div class="app-footer__inner">
+                                    <div class="app-footer-left">
+                                        <ul class="nav">
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0);" class="nav-link">
+                                                    Footer Link 1
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0);" class="nav-link">
+                                                    Footer Link 2
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="app-footer-right">
+                                        <ul class="nav">
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0);" class="nav-link">
+                                                    Footer Link 3
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="javascript:void(0);" class="nav-link">
+                                                    <div class="badge badge-success mr-1 ml-0">
+                                                        <small>NEW</small>
+                                                    </div>
+                                                    Footer Link 4
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+            </div>
         </div>
     </div>
+</body>    
 <script type="text/javascript" src="assets/scripts/main.js"></script></body>
 </html>
