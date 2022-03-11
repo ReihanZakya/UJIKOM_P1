@@ -4,10 +4,11 @@
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
                     <div class="page-title-icon">
-                        <i class="pe-7s-graph text-success">
-                        </i>
+                        <a href="?url=catatan_perjalanan">
+                            <i class="pe-7s-note"></i>
+                        </a>
                     </div>
-                    <div>Edit perjalanan
+                    <div><a href="?url=catatan_perjalanan">Edit Catatan</a>
                         <div class="page-title-subheading">
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                                             <td><?= $pecah['6'];?></td>
                                             <td>
                                                 <a href="?url=edit_catatan&id_catatan=<?= $pecah['0'] ?>" class="btn btn-warning">
-                                                    <i class="fa fa-pen"></i>Edit
+                                                    <i class="fa fa-pen"></i> Edit
                                                 </a>
                                             </td>
                                         </tr>

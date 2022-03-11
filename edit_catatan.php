@@ -4,7 +4,7 @@
                 <div class="page-title-wrapper">
                     <div class="page-title-heading">
                         <div class="page-title-icon">
-                            <i class="pe-7s-graph text-success">
+                            <i class="pe-7s-note text-success">
                             </i>
                         </div>
                         <div>Edit Catatan

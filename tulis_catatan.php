@@ -4,10 +4,11 @@
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
                     <div class="page-title-icon">
-                        <i class="pe-7s-graph text-success">
-                        </i>
+                        <a href="?url=tulis_catatan">
+                            <i class="pe-7s-pen"></i>
+                        </a>
                     </div>
-                    <div>Tulis Catatan Perjalanan
+                    <div><a href="?url=tulis_catatan">Tulis Catatan Perjalanan</a>
                     </div>
                 </div>
                 
@@ -34,8 +35,8 @@
                             </div>
                             <div class="position-relative row form-check">
                                 <div class="col-sm-10 offset-sm-2">
-                                    <button class="btn btn-secondary" type="submit">Simpan</button>
-                                    <button class="btn btn-secondary" type="reset">Kosongkan</button>
+                                    <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Simpan</button>
+                                    <button class="btn btn-primary" type="reset"><i class="fa fa-trash"></i> Kosongkan</button>
                                 </div>
                             </div>
                         </form>

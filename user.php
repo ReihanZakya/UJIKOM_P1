@@ -301,8 +301,8 @@ if(empty( $_SESSION['nik'])){ ?>
                                 </li>
                                 <li>
                                     <a href="?url=catatan_perjalanan" >
-                                        <i class="metismenu-icon pe-7s-folder"></i>
-                                        Edit Perjalanan
+                                        <i class="metismenu-icon pe-7s-note"></i>
+                                        Edit Catatan
                                     </a>
                                 </li>
                                 <li>
@@ -365,7 +365,7 @@ if(empty( $_SESSION['nik'])){ ?>
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">
-                                                    <a href="tulis_catatan.php"> Tulis Catatan</a>
+                                                    <a href="?url=tulis_catatan"> Tulis Catatan</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -376,7 +376,7 @@ if(empty( $_SESSION['nik'])){ ?>
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">
-                                                    <a href="catatan_perjalanan.php"> Catatan Perjalanan</a>
+                                                    <a href="?url=catatan_perjalanan">Edit Catatan </a>
                                                 </div>
                                             </div>
                                         </div>
