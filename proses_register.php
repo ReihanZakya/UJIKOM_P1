@@ -7,7 +7,7 @@ $nama_lengkap    = $_POST['nama_lengkap'];
 $data = file("config.txt", FILE_IGNORE_NEW_LINES);
 foreach($data as $value){
     $pecah = explode("|",$value);
-    if ($nik==$pecah['0']) {
+    if ($nik==$pecah['1']) {
         $cek = true;
     }
 }
@@ -31,6 +31,7 @@ if ($cek){ //jika nik sudah terdaftar ?>
      fclose($file);
 
      ?>
+
      <script type="text/javascript">
         alert('Pendaftaran berhasil dilakukan');
         window.location.assign('index.php');

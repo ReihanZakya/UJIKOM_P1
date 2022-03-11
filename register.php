@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V10</title>
+	<title>Register - Peduli Diri</title>
+    <link rel="icon" href="assets/images/logoicon.png" type="image/x-icon">
+	
 	<meta charset="UTF-8">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
@@ -41,7 +44,7 @@
 
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
-						<input class="input100" type="number" name="nik" placeholder="NIK" max="9999999999999999" >
+						<input class="input100" type="text" name="nik" placeholder="NIK" maxlength="16" minlength="16" >
 						<span class="focus-input100"></span>
 					</div>
 					
