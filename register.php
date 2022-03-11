@@ -41,7 +41,7 @@
 
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
-						<input class="input100" type="number" name="nik" placeholder="NIK">
+						<input class="input100" type="number" name="nik" placeholder="NIK" max="9999999999999999" >
 						<span class="focus-input100"></span>
 					</div>
 					
