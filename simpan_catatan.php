@@ -20,5 +20,5 @@ fclose($file);
 ?>
 <script type="text/javascript">
     alert('Data Catatan Perjalanan Berhasil Disimpan');
-    window.location.assign('catatan_perjalanan.php');
+    window.location.assign('user.php?url=catatan_perjalanan');
 </script>

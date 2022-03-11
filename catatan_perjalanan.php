@@ -24,6 +24,7 @@
                                 <table id="example" class="table table-bordered">
                                     <thead>
                                         <tr>
+                                            <th>NO</th>
                                             <th>Tanggal</th>
                                             <th>Waktu</th>
                                             <th>Lokasi</th>
@@ -32,22 +33,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                        $data = file('catatan.txt',FILE_IGNORE_NEW_LINES);
+                                    <?php
+                                        $no=1;
+                                        $halaman = 10;
+                                        $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
                                         $user = $_SESSION['nik']."|".$_SESSION['nama_lengkap'];
-                                    foreach($data as $value){
-                                        $a =explode("|",$value);
-                                        @$b =$a['1']."|".$a['2'];
-                                        if($b==$user){
-
-                                        ?>
+                                        foreach($data as $value){
+                                            $pecah = explode("|", $value);
+                                            @$key = $pecah['1']."|".$pecah['2'];
+                                            if($key==$user){
+                                    ?>
                                         <tr>
-                                            <td><?= $a['3'];?></td>
-                                            <td><?= $a['4'];?></td>
-                                            <td><?= $a['5'];?></td>
-                                            <td><?= $a['6'];?></td>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $pecah['3'];?></td>
+                                            <td><?= $pecah['4'];?></td>
+                                            <td><?= $pecah['5'];?></td>
+                                            <td><?= $pecah['6'];?></td>
                                             <td>
-                                                <a href="?url=edit_catatan$id_catatan=<? $pecah['0'] ?>" class="btn btn-warning">
+                                                <a href="?url=edit_catatan&id_catatan=<?= $pecah['0'] ?>" class="btn btn-warning">
                                                     <i class="fa fa-pen"></i>Edit
                                                 </a>
                                             </td>
