@@ -39,7 +39,7 @@
 
 				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="proses_register.php">
 					<span class="login100-form-title p-b-51">
-						Peduli Diri
+					 Daftar Peduli Diri
 					</span>
 
 					
@@ -60,7 +60,7 @@
 							<h6 style="color:gray; text-align:center;" class="" for="ckb1">
 								Sudah Punya Akun?
                                 <a href="index.php" class="txt1">
-								Masuk Disini
+								Kembali ke Halaman Login
 					    		</a>
                             </h6>
                             
@@ -69,7 +69,7 @@
 
 					<div class="container-login100-form-btn m-t-17">
 						<button type="submit" class="login100-form-btn">
-							Buat
+							Daftar
 						</button>
 					</div>
 

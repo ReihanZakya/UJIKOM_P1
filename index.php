@@ -39,7 +39,7 @@
 
 				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="proses_login.php">
 					<span class="login100-form-title p-b-51">
-						Peduli Diri
+						Masuk Peduli Diri
 					</span>
 
 					
@@ -60,7 +60,7 @@
 							<h6 style="color:gray; text-align:center;" class="" for="ckb1">
 								Belum Punya Akun?
                                 <a href="register.php" class="txt1">
-								Buat Akun Disini
+								Daftar Akun Baru
 					    		</a>
                             </h6>
                             

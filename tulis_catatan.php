@@ -19,7 +19,7 @@
     
             <div class="tab-pane tabs-animation fade show active"role="tabpanel">
                 <div class="main-card mb-3 card">
-                    <div class="card-body"><h5 class="card-title">Tulis Catatan Perjalanan</h5>
+                    <div class="card-body"><h5 class="card-title">Tulis Catatan Perjalanan</h5><hr>
                         <form class="" action="simpan_catatan.php" method="POST">
                             <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10"><input name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control"></div>

@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 $nik             = $_POST['nik'];
 $nama_lengkap    = $_POST['nama_lengkap'];
 

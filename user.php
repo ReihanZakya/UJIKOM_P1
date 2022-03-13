@@ -289,25 +289,25 @@ if(empty( $_SESSION['nik'])){ ?>
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li>
                                     <a href="user.php" >
-                                        <i class="metismenu-icon pe-7s-monitor"></i>
+                                        <i class="metismenu-icon pe-7s-monitor text-primary"></i>
                                         Dashboard
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?url=tulis_catatan" >
-                                        <i class="metismenu-icon pe-7s-pen"></i>
+                                        <i class="metismenu-icon pe-7s-pen text-succes"></i>
                                         Tulis Catatan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?url=catatan_perjalanan" >
-                                        <i class="metismenu-icon pe-7s-note"></i>
+                                        <i class="metismenu-icon pe-7s-note text-warning"></i>
                                         Edit Catatan
                                     </a>
-                                </li>
+                                </li><hr>
                                 <li>
                                     <a href="logout.php" >
-                                        <i class="metismenu-icon pe-7s-next-2"></i>
+                                        <i class="metismenu-icon pe-7s-next-2 text-danger"></i>
                                         Logout
                                     </a>
                                 </li>
