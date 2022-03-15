@@ -31,8 +31,8 @@ if(empty( $_SESSION['nik'])){ ?>
 
 <link href="main.css" rel="stylesheet"></head>
 <body>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-        <div class="app-header header-shadow">
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header ">
+        <div class="app-header header-shadow mx-auto animated bounceInRight">
             <div class="app-header__logo">
                 <div class=""><a href="user.php"><img src="assets/images/logo-inverse3.png" alt=""></a></div>
                 <div class="header__pane ml-auto">
@@ -284,7 +284,7 @@ if(empty( $_SESSION['nik'])){ ?>
                     </div>    
                     <!-- sidebar -->
                     <div class="scrollbar-sidebar">
-                        <div class="app-sidebar__inner">
+                        <div class="app-sidebar__inner mx-auto animated bounceInLeft">
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li>
@@ -338,7 +338,7 @@ if(empty( $_SESSION['nik'])){ ?>
                     }
                 }else{ ?>
                 <!-- isi dashboard -->
-                    <div class="app-main__outer">
+                    <div class="app-main__outer mx-auto animated bounceInDown">
                     <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">

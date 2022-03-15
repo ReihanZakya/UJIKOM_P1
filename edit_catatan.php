@@ -1,4 +1,4 @@
- <div class="app-main__outer">
+ <div class="app-main__outer mx-auto animated bounceInDown">
         <div class="app-main__inner">
             <div class="app-page-title">
                 <div class="page-title-wrapper">
@@ -43,7 +43,9 @@
                                 <div class="position-relative row form-check">
                                     <div class="col-sm-10 offset-sm-2">
                                         <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Simpan</button>
-                                        <button class="btn btn-primary" type="reset"><i class="fa fa-trash"></i> Kosongkan</button>
+                                        <a href="?url=catatan_perjalanan">
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-mail-reply-all"></i> Kembali</button>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
