@@ -1,5 +1,19 @@
 <?php
 session_start();
+
+$year = $_POST['tanggal'];
+$getOnlyear = date('Y', strtotime($year)); // TAHUN
+$dateNow = date('Y');
+if ($getOnlyear < $dateNow) {
+    echo "
+    <script>
+    alert('Tahun tidak valid');
+    window.location.assign('user.php?url=tulis_catatan');
+    </script>
+    ";
+    die;
+}
+
 $nik            =$_SESSION['nik'];
 $nama_lengkap   =$_SESSION['nama_lengkap'];
 $tanggal    =$_POST['tanggal'];
