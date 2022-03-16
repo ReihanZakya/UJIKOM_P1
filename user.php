@@ -12,7 +12,7 @@ if(empty( $_SESSION['nik'])){ ?>
 
 <head>
     <title>Peduli Diri</title>
-    <link rel="icon" href="assets/images/logoicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/iconlogo1.png" type="image/x-icon">
     <!-- simplebar CSS-->
     <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
     <!-- Bootstrap core CSS-->
@@ -34,7 +34,7 @@ if(empty( $_SESSION['nik'])){ ?>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header ">
         <div class="app-header header-shadow mx-auto animated bounceInRight">
             <div class="app-header__logo">
-                <div class=""><a href="user.php"><img src="assets/images/logo-inverse3.png" alt=""></a></div>
+                <div class=""><a href="user.php"><img src="assets/images/catatanperjalanan.png" width="80%" height="80%" alt=""></a></div>
                 <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
