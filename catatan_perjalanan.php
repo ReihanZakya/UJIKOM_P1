@@ -49,7 +49,7 @@
                                             <td><?= $pecah['3'];?></td>
                                             <td><?= $pecah['4'];?></td>
                                             <td><?= $pecah['5'];?></td>
-                                            <td><?= $pecah['6'];?></td>
+                                            <td><?= $pecah['6'];?> Celcius</td>
                                             <td>
                                                 <a href="?url=edit_catatan&id_catatan=<?= $pecah['0'] ?>" class="btn btn-warning">
                                                     <i class="fa fa-pen"></i> Edit
