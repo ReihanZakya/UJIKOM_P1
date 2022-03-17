@@ -417,7 +417,7 @@ if(empty( $_SESSION['nik'])){ ?>
                                                             <td><?= $pecah['3'];?></td>
                                                             <td><?= $pecah['4'];?></td>
                                                             <td><?= $pecah['5'];?></td>
-                                                            <td><?= $pecah['6'];?> Celcius</td>
+                                                            <td><?= $pecah['6'];?></td>
                                                         </tr>
                                                         <?php }} ?>
                                                     </tbody>  
