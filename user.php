@@ -295,16 +295,23 @@ if(empty( $_SESSION['nik'])){ ?>
                                 </li>
                                 <li>
                                     <a href="?url=tulis_catatan" >
-                                        <i class="metismenu-icon pe-7s-pen text-succes"></i>
+                                        <i class="metismenu-icon pe-7s-pen text-primary"></i>
                                         Tulis Catatan
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?url=catatan_perjalanan" >
-                                        <i class="metismenu-icon pe-7s-note text-warning"></i>
+                                        <i class="metismenu-icon pe-7s-note text-primary"></i>
                                         Edit Catatan
                                     </a>
-                                </li><hr>
+                                </li>
+                                <li>
+                                    <a href="?url=data_covid" >
+                                        <i class="metismenu-icon pe-7s-folder text-primary"></i>
+                                        Informasi Covid
+                                    </a>
+                                </li>
+                                <hr>
                                 <li>
                                     <a href="logout.php" >
                                         <i class="metismenu-icon pe-7s-next-2 text-danger"></i>
@@ -330,6 +337,10 @@ if(empty( $_SESSION['nik'])){ ?>
 
                         case 'edit_catatan';
                             include 'edit_catatan.php';
+                            break;
+
+                        case 'data_covid';
+                            include 'datacovid.php';
                             break;
 
                         default:
