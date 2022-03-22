@@ -302,7 +302,7 @@ if(empty( $_SESSION['nik'])){ ?>
                                 <li>
                                     <a href="?url=catatan_perjalanan" >
                                         <i class="metismenu-icon pe-7s-note text-primary"></i>
-                                        Edit Catatan
+                                        Kelola Catatan
                                     </a>
                                 </li>
                                 <li>

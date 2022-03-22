@@ -8,7 +8,7 @@
                             <i class="pe-7s-note"></i>
                         </a>
                     </div>
-                    <div><a href="?url=catatan_perjalanan">Edit Catatan</a>
+                    <div><a href="?url=catatan_perjalanan">Kelola Catatan</a>
                         <div class="page-title-subheading">
                         </div>
                     </div>
@@ -31,6 +31,7 @@
                                             <th>Lokasi</th>
                                             <th>Suhu Tubuh</th>
                                             <th>Edit</th>
+                                            <th>Hapus</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -52,7 +53,12 @@
                                             <td><?= $pecah['6'];?></td>
                                             <td>
                                                 <a href="?url=edit_catatan&id_catatan=<?= $pecah['0'] ?>" class="btn btn-warning">
-                                                    <i class="fa fa-pen"></i> Edit
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a onclick="return confirm('Apakah anda yakin ingin menghapus?')" href="hapus_catatan.php?id_catatan=<?= $pecah['0'] ?>" class="btn btn-danger">
+                                                    <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>
                                         </tr>
