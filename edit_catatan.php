@@ -29,16 +29,16 @@
                             <form class="" action="simpan_edit_catatan.php" method="POST">
                                 <input type="hidden" name="id_catatan" value="<?= $pecah['0']; ?>">
                                 <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['3']; ?>" name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control"></div>
+                                    <div class="col-sm-10"><input value="<?= $pecah['3']; ?>" name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Jam</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['4']; ?>" name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control"></div>
+                                    <div class="col-sm-10"><input value="<?= $pecah['4']; ?>" name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Lokasi yang dituju</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['5']; ?>" name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control"></div>
+                                    <div class="col-sm-10"><input value="<?= $pecah['5']; ?>" name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['6']; ?>" name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control"></div>
+                                    <div class="col-sm-10"><input value="<?= $pecah['6']; ?>" name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-check">
                                     <div class="col-sm-10 offset-sm-2">
@@ -55,4 +55,19 @@
                 </div>
             </div>
         </div>   
+        <div class="app-wrapper-footer">
+            <div class="app-footer">
+                <div class="app-footer__inner">
+                    <div class="app-footer-right">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="javascript:void(0);" class="nav-link">
+                                    &copy; Mohammad Reihan Zakya Alawi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
 </div>

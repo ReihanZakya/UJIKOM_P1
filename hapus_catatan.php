@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $id_catatan =$_GET['id_catatan'];
 
 $no = 0;
@@ -17,8 +17,7 @@ $buka_file = file('catatan.txt');
 unset($buka_file[$line]);
 file_put_contents('catatan.txt',implode("", $buka_file));
 
+
+$_SESSION['success'] = 'Data Berhasi Dihapus';
+header('Location: user.php?url=catatan_perjalanan');
 ?>
-<script type="text/javascript">
-    alert('Data Catatan Perjalanan Berhasi Dihapus');
-    window.location.assign('user.php?url=catatan_perjalanan');
-</script>

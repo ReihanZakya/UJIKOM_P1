@@ -1,18 +1,13 @@
 <?php
+session_start();
 error_reporting(0);
 $nik             = $_POST['nik'];
 $nama_lengkap    = $_POST['nama_lengkap'];
 
-if (strlen($nik) < 16){
-    echo "<script> 
-    alert('!! Maaf NIK Anda Kurang Dari 16 Angka !!');
-    window.location.assign('register.php');
-    </script>";die;
-}else if(strlen($nik) > 16){
-    echo "<script> 
-    alert('!! Maaf NIK Anda Lebih Dari 16 Angka !!');
-    window.location.assign('register.php');
-    </script>";die;
+if (strlen($nik) != 16){
+    $_SESSION['error'] = 'NIK Harus 16 Angka';
+    header('Location:register.php');
+    die;    
 }
 
 
@@ -25,12 +20,12 @@ foreach($data as $value){
     }
 }
 
-if ($cek){ //jika nik sudah terdaftar ?>
+if ($cek){ //jika nik sudah terdaftar
 
-    <script type="text/javascript">
-        alert('!! Maaf NIK yang anda gunakan sudah terdaftar !!');
-        window.location.assign('index.php');
-    </script>
+    $_SESSION['error'] = "NIK sudah di gunakan";
+    header("Location: register.php");
+    die;
+?>
 
 <?php } else{ //jika data tidak ditemukan
 
@@ -44,11 +39,8 @@ if ($cek){ //jika nik sudah terdaftar ?>
      //tututp file
      fclose($file);
 
-     ?>
 
-     <script type="text/javascript">
-        alert('Pendaftaran berhasil dilakukan');
-        window.location.assign('index.php');
-    </script>
- 
- <?php }
+   $_SESSION['success'] = "Pendaftaran Berhasil Dilakukan";
+   header("Location: index.php");
+} ?>
+   

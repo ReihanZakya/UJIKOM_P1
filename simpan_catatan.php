@@ -31,8 +31,6 @@ fwrite($file,$format);
 // tutup file
 fclose($file);
 
+$_SESSION['success'] = 'Data Perjalanan Berhasil Disimpan';
+header('Location: user.php?url=catatan_perjalanan');
 ?>
-<script type="text/javascript">
-    alert('Data Catatan Perjalanan Berhasil Disimpan');
-    window.location.assign('user.php?url=catatan_perjalanan');
-</script>

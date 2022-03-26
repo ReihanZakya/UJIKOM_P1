@@ -57,7 +57,7 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <a onclick="return confirm('Apakah anda yakin ingin menghapus?')" href="hapus_catatan.php?id_catatan=<?= $pecah['0'] ?>" class="btn btn-danger">
+                                                <a id="btn-hapus" href="hapus_catatan.php?id_catatan=<?= $pecah['0'] ?>" class="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>
@@ -72,5 +72,19 @@
             </div>  
         </div>
     </div>
+    <div class="app-wrapper-footer">
+        <div class="app-footer">
+            <div class="app-footer__inner">
+                <div class="app-footer-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                &copy; Mohammad Reihan Zakya Alawi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
 </div>
-

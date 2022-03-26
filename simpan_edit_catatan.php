@@ -39,8 +39,6 @@ $data[$line] = $format;
 $data = implode("\n", $data);
 file_put_contents('catatan.txt', $data);
 
+$_SESSION['success'] = 'Data Berhasil Diedit';
+header('Location: user.php?url=catatan_perjalanan');
 ?>
-<script type="text/javascript">
-    alert('Data Catatan Perjalanan Berhasil Diubah');
-    window.location.assign('user.php?url=catatan_perjalanan');
-</script>

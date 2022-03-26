@@ -25,18 +25,18 @@
                                 <div class="col-sm-10"><input name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control"></div>
                             </div>
                             <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Jam</label>
-                                <div class="col-sm-10"><input name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control"></div>
+                                <div class="col-sm-10"><input name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control" required></div>
                             </div>
                             <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Lokasi yang dituju</label>
-                                <div class="col-sm-10"><input name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control"></div>
+                                <div class="col-sm-10"><input name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control" required></div>
                             </div>
                             <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
-                                <div class="col-sm-10"><input name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control"></div>
+                                <div class="col-sm-10"><input name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh" type="text" class="form-control" required></div>
                             </div>
                             <div class="position-relative row form-check">
                                 <div class="col-sm-10 offset-sm-2">
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Simpan</button>
-                                    <button class="btn btn-primary" type="reset"><i class="fa fa-trash"></i> Kosongkan</button>
+                                    <button class="btn btn-primary" type="reset"><i class="fa fa-trash" required></i> Kosongkan</button>
                                 </div>
                             </div>
                         </form>
@@ -45,7 +45,21 @@
             </div>
         </div>
     </div>  
+    <div class="app-wrapper-footer">
+        <div class="app-footer">
+            <div class="app-footer__inner">
+                <div class="app-footer-right">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                &copy; Mohammad Reihan Zakya Alawi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
 </div>
-
 
       
