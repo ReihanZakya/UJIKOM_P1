@@ -50,14 +50,11 @@
 				  </div>
 			   </div>
 			  </div>
-			  	<div class="position-relative row">
-					<div class="col-lg-12">
-						<button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-ligh mt-4">masuk</button>
-						<a href="register.php">
-						<button type="button" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light mt-4 mb-4">Daftar</button>
-						</a>
-					</div>
-				</div>
+			  <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">masuk</button>
+			  	<div class="text-center pt-3">
+                	<hr>
+					<p class="text-muted">Belum Punya akun? <a href="register.php">Daftar Akun Baru </a></p>
+			  </div>
 			 </form>
 		   </div>
 		  </div>

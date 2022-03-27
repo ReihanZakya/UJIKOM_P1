@@ -5,12 +5,8 @@ $year = $_POST['tanggal'];
 $getOnlyear = date('Y', strtotime($year)); // TAHUN
 $dateNow = date('Y');
 if ($getOnlyear < $dateNow) {
-    echo "
-    <script>
-    alert('Tahun tidak valid');
-    window.location.assign('user.php?url=tulis_catatan');
-    </script>
-    ";
+   $_SESSION['error'] = "Tahun Tidak Sesuai";
+    header("Location: user.php?url=tulis_catatan");
     die;
 }
 

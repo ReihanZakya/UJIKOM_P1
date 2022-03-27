@@ -13,7 +13,7 @@ $response_data = json_decode($json_data);
                 <div class="page-title-heading">
                     <div class="page-title-icon">
                         <a href="?url=catatan_perjalanan">
-                            <i class="pe-7s-note"></i>
+                            <i class="pe-7s-folder"></i>
                         </a>
                     </div>
                     <div><a href="?url=catatan_perjalanan">Data Kasus COVID 19 Di Indonesia</a>
