@@ -87,7 +87,7 @@
 <?php if(isset($_SESSION['error'])) { ?>
 	<script>
 		Swal.fire(
-		'Kesalahan',
+		'Maaf',
 		'<?= $_SESSION['error']; ?>',
 		'error'
 		)

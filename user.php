@@ -1,11 +1,10 @@
 <?php
 session_start();
-if(empty( $_SESSION['nik'])){ ?>
-    <script type="text/javascript">
-        alert('Maaf Anda Belum Melakukan Login');
-        window.location.assign('index.php');
-    </script>
-<?php } ?>
+if(empty( $_SESSION['nik'])){
+    $_SESSION['error'] = "Anda Belum Melakukan Login";
+    header("Location: register.php");
+    die;
+ } ?>
 
 <!doctype html>
 <html lang="en">
@@ -233,7 +232,7 @@ if(empty( $_SESSION['nik'])){ ?>
                                                             <td><?= $pecah['3'];?></td>
                                                             <td><?= $pecah['4'];?></td>
                                                             <td><?= $pecah['5'];?></td>
-                                                            <td><?= $pecah['6'];?></td>
+                                                            <td><?= $pecah['6'];?>℃</td>
                                                         </tr>
                                                         <?php }} ?>
                                                     </tbody>  
