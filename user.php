@@ -94,7 +94,7 @@ if(empty( $_SESSION['nik'])){
                                 <li <?php (isset($_GET['url']) == 'index.php') ? '': 'active' ?>>
                                     <a href="user.php">
                                         <i class="metismenu-icon pe-7s-monitor text-primary"></i>
-                                        Dashboard
+                                        Beranda
                                     </a>
                                 </li>
                                 <li <?php (isset($_GET['url']) == 'tulis_catatan') ? 'mm-active' : ''; ?> >
