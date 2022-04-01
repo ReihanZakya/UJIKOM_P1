@@ -18,6 +18,9 @@ if(empty( $_SESSION['nik'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="Tables are the backbone of almost all web applications.">
     <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="icon" href="assets/images/iconlogo1.png" type="image/x-icon">
+
  
     <link rel="stylesheet" type="text/css" href="datatable/datatables.min.css"/>
  
@@ -160,7 +163,7 @@ if(empty( $_SESSION['nik'])){
                                     <div><a href=""> Peduli Diri </a>
                                         <div class="page-title-subheading">
                                         <?php 
-                                        echo "Selamat Datang ".$_SESSION['nama_lengkap']. " Di Aplikasi Peduli Diri"; 
+                                        echo "Selamat Datang ".$_SESSION['nama_lengkap']. " Di Aplikasi Catatan Perjalanan"; 
                                         ?>
                                         </div>
                                     </div>
