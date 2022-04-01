@@ -14,8 +14,8 @@ if (strlen($nik) != 16){
 // cek apakah nik sudah terdaftar atau belum
 $data = file("config.txt", FILE_IGNORE_NEW_LINES);
 foreach($data as $value){
-    $pecah = explode("|",$value);
-    if ($nik==$pecah['0']) {
+    $pisah = explode("|",$value);
+    if ($nik==$pisah['0']) {
         $cek = true;
     }
 }

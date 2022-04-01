@@ -41,23 +41,23 @@
                                         $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
                                         $user = $_SESSION['nik']."|".$_SESSION['nama_lengkap'];
                                         foreach($data as $value){
-                                            $pecah = explode("|", $value);
-                                            @$key = $pecah['1']."|".$pecah['2'];
+                                            $pisah = explode("|", $value);
+                                            @$key = $pisah['1']."|".$pisah['2'];
                                             if($key==$user){
                                     ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
-                                            <td><?= $pecah['3'];?></td>
-                                            <td><?= $pecah['4'];?></td>
-                                            <td><?= $pecah['5'];?></td>
-                                            <td><?= $pecah['6'];?>℃</td>
+                                            <td><?= $pisah['3'];?></td>
+                                            <td><?= $pisah['4'];?></td>
+                                            <td><?= $pisah['5'];?></td>
+                                            <td><?= $pisah['6'];?>℃</td>
                                             <td>
-                                                <a href="?url=edit_catatan&id_catatan=<?= $pecah['0'] ?>" class="btn btn-warning">
+                                                <a href="?url=edit_catatan&id_catatan=<?= $pisah['0'] ?>" class="btn btn-warning">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                             </td>
                                             <td>
-                                                <a id="btn-hapus" href="hapus_catatan.php?id_catatan=<?= $pecah['0'] ?>" class="btn btn-danger">
+                                                <a id="btn-hapus" href="hapus_catatan.php?id_catatan=<?= $pisah['0'] ?>" class="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>

@@ -31,12 +31,12 @@
                                 <div class="col-sm-10"><input name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control" required></div>
                             </div>
                             <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
-                                <div class="col-sm-10"><input name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh Dalam Celcius" type="number" max="45" min="30"  class="form-control"></div>
+                                <div class="col-sm-10"><input name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh Dalam Celcius" type="number" step="any" max="45" min="30"  class="form-control"></div>
                             </div>
                             <div class="position-relative row form-check">
                                 <div class="col-sm-10 offset-sm-2">
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Simpan</button>
-                                    <button class="btn btn-primary" type="reset"><i class="fa fa-trash"></i> Kosongkan</button>
+                                    <button class="btn btn-primary" type="reset"><i class="fa fa-trash"></i> Batal</button>
                                 </div>
                             </div>
                         </form>

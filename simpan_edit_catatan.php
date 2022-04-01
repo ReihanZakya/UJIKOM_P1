@@ -28,8 +28,8 @@ $no = 0;
 $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
 foreach($data as $value){
     $no++;
-    $pecah = explode("|", $value);
-    if($pecah['0']==$id_catatan){
+    $pisah = explode("|", $value);
+    if($pisah['0']==$id_catatan){
         $line = $no-1; //mencari urutan baris ke berapa
     }
 

@@ -23,28 +23,28 @@
                             $data = file('catatan.txt', FILE_IGNORE_NEW_LINES);
                             $id_catatan = $_GET['id_catatan'];
                             foreach($data as $value){
-                                $pecah = explode('|', $value);
-                                if ($pecah['0']==$id_catatan){
+                                $pisah = explode('|', $value);
+                                if ($pisah['0']==$id_catatan){
                         ?>
                             <form class="" action="simpan_edit_catatan.php" method="POST">
-                                <input type="hidden" name="id_catatan" value="<?= $pecah['0']; ?>">
+                                <input type="hidden" name="id_catatan" value="<?= $pisah['0']; ?>">
                                 <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Tanggal</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['3']; ?>" name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control" required></div>
+                                    <div class="col-sm-10"><input value="<?= $pisah['3']; ?>" name="tanggal" id="exampleEmail" placeholder="Tanggal" type="date" min="2022-1-1" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Jam</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['4']; ?>" name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control" required></div>
+                                    <div class="col-sm-10"><input value="<?= $pisah['4']; ?>" name="jam" id="examplePassword" placeholder="Jam" type="time" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Lokasi yang dituju</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['5']; ?>" name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control" required></div>
+                                    <div class="col-sm-10"><input value="<?= $pisah['5']; ?>" name="lokasi" id="examplePassword" placeholder="Masukan Lokasi" type="text" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Suhu tubuh</label>
-                                    <div class="col-sm-10"><input value="<?= $pecah['6']; ?>" name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh Dalam Celcius" type="number" max="45" min="30" class="form-control" required></div>
+                                    <div class="col-sm-10"><input value="<?= $pisah['6']; ?>" name="suhu" id="examplePassword" placeholder="Masukan Suhu Tubuh Dalam Celcius" type="number" step="any" max="45" min="30" class="form-control" required></div>
                                 </div>
                                 <div class="position-relative row form-check">
                                     <div class="col-sm-10 offset-sm-2">
                                         <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Simpan</button>
                                         <a href="?url=catatan_perjalanan">
-                                        <button class="btn btn-primary" type="button"><i class="fa fa-mail-reply-all"></i> Kembali</button>
+                                        <button class="btn btn-primary" type="button"><i class="pe-7s-back"></i>  Kembali</button>
                                         </a>
                                     </div>
                                 </div>

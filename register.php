@@ -36,7 +36,7 @@
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="exampleInputUsername" class="sr-only">NIK</label>
-				  <input name="nik" required type="number" id="exampleInputUsername" class="form-control form-control-rounded" placeholder="Masukan Nik">
+				  <input name="nik" required type="number" autocomplete="off" id="exampleInputUsername" class="form-control form-control-rounded" placeholder="Masukan Nik">
 				  <div class="form-control-position">
 					 
 				  </div>
@@ -45,7 +45,7 @@
 			  <div class="form-group">
 			   <div class="position-relative has-icon-right">
 				  <label for="exampleInputPassword" class="sr-only">nama_panjang</label>
-				  <input name="nama_lengkap" required type="text" id="exampleInputPassword" class="form-control form-control-rounded" placeholder="Masukan Nama lengkap">
+				  <input name="nama_lengkap" required type="text" autocomplete="off" id="exampleInputPassword" class="form-control form-control-rounded" placeholder="Masukan Nama lengkap">
 				  <div class="form-control-position">
 				
 				  </div>
