@@ -19,6 +19,8 @@
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
+
+  <link href="./main.css" rel="stylesheet"></head>
   
 </head>
 
@@ -31,28 +33,28 @@
 		 	<div class="text-center">
 		 		<img src="assets/images/iconlogo1.png" widht="100" height="100" >
 		 	</div>
-		  <div class="card-title text-uppercase text-center py-3 mt-3">Daftar -Aplikasi Catatan Perjalanan </div>
+		  <div class="card-title text-uppercase text-center py-3 mt-3">Daftar - Aplikasi Catatan Perjalanan </div>
 		    <form method="POST" action="proses_register.php">
-			  <div class="form-group">
-			   <div class="position-relative has-icon-right">
-				  <label for="exampleInputUsername" class="sr-only">NIK</label>
-				  <input name="nik" required type="number" autocomplete="off" id="exampleInputUsername" class="form-control form-control-rounded" placeholder="Masukan Nik">
-				  <div class="form-control-position">
-					 
-				  </div>
-			   </div>
-			  </div>
-			  <div class="form-group">
-			   <div class="position-relative has-icon-right">
-				  <label for="exampleInputPassword" class="sr-only">nama_panjang</label>
-				  <input name="nama_lengkap" required type="text" autocomplete="off" id="exampleInputPassword" class="form-control form-control-rounded" placeholder="Masukan Nama lengkap">
-				  <div class="form-control-position">
-				
-				  </div>
-			   </div>
-			  </div>
+			<div class="form-group">
+				<div class="position-relative has-icon-left">
+					<label for="exampleInputUsername" class="sr-only">NIK</label>
+						<input name="nik" type="number" id="exampleInputUsername" class="form-control" placeholder="Masukan NIK" autocomplete="off" required>
+						<div class="form-control-position">
+							<i class="pe-7s-id"></i>
+					</div>
+				</div>
 			</div>
-			 <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">Daftar</button>
+			<div class="form-group">
+				<div class="position-relative has-icon-left">
+					<label for="exampleInputPassword" class="sr-only">Nama lengkap</label>
+					<input name="nama_lengkap" type="text" id="exampleInputPassword" class="form-control" placeholder="Masukan Nama Lengkap" autocomplete="off" required>
+					<div class="form-control-position">
+						<i class="pe-7s-users"></i>
+					</div>
+				</div>
+			</div>
+			<br>
+			 <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Daftar</button>
 			  <div class="text-center pt-3">
                 <hr>
 				<p class="text-muted">Sudah Punya akun? <a href="index.php">Masuk </a></p>

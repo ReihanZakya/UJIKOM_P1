@@ -5,12 +5,8 @@ $year = $_POST['tanggal'];
 $getOnlyear = date('Y', strtotime($year)); // TAHUN
 $dateNow = date('Y');
 if ($getOnlyear < $dateNow) {
-    echo "
-    <script>
-    alert('Tahun tidak valid');
-    window.location.assign('user.php?url=catatan_perjalanan');
-    </script>
-    ";
+    $_SESSION['error'] = "Tahun tidak sesuai";
+    header("Location: user.php?url=tulis_catatan");
     die;
 }
 
@@ -39,6 +35,6 @@ $data[$line] = $format;
 $data = implode("\n", $data);
 file_put_contents('catatan.txt', $data);
 
-$_SESSION['success'] = 'Data Berhasil Diedit';
+$_SESSION['success'] = 'Data berhasil diedit';
 header('Location: user.php?url=catatan_perjalanan');
 ?>

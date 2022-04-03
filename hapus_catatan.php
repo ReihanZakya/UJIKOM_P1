@@ -18,6 +18,6 @@ unset($buka_file[$line]);
 file_put_contents('catatan.txt',implode("", $buka_file));
 
 
-$_SESSION['success'] = 'Data Berhasi Dihapus';
+$_SESSION['success'] = 'Data berhasi dihapus';
 header('Location: user.php?url=catatan_perjalanan');
 ?>

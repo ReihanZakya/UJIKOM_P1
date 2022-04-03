@@ -5,7 +5,13 @@ $nik             = $_POST['nik'];
 $nama_lengkap    = $_POST['nama_lengkap'];
 
 if (strlen($nik) != 16){
-    $_SESSION['error'] = 'NIK Harus 16 Angka';
+    $_SESSION['error'] = 'NIK tidak valid';
+    header('Location:register.php');
+    die;    
+}
+
+if (strlen($nama_lengkap) < 2){
+    $_SESSION['error'] = 'Nama tidak valid';
     header('Location:register.php');
     die;    
 }

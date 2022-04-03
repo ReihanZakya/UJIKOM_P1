@@ -12,15 +12,20 @@
   <title>Aplikasi Peduli Diri - Login </title>
   <!--favicon-->
   <link rel="icon" href="assets/images/iconlogo1.png" type="image/x-icon">
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
   <!-- animate CSS-->
   <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
   
+  <link href="./main.css" rel="stylesheet"></head>
+
 </head>
 
 <body>
@@ -34,23 +39,26 @@
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3 mt-3">Masuk - Aplikasi Catatan Perjalanan</div>
 		    <form method="POST" action="proses_login.php">
-			  <div class="form-group">
-			   <div class="position-relative has-icon-right">
-				  <label for="exampleInputUsername" class="sr-only">NIK</label>
-				  <input name="nik" required type="number" id="exampleInputUsername" class="form-control form-control-rounded" autocomplete="off" placeholder="Masukan Nik">
-				  <div class="form-control-position">
-				  </div>
-			   </div>
-			  </div>
-			  <div class="form-group">
-			   <div class="position-relative has-icon-right">
-				  <label for="exampleInputPassword" class="sr-only">Nama Lengkap</label>
-				  <input name="nama_lengkap" required type="text" id="exampleInputPassword" class="form-control form-control-rounded" autocomplete="off" placeholder="Masukan Nama lengkap">
-				  <div class="form-control-position">
-				  </div>
-			   </div>
-			  </div>
-			  <button type="submit" class="btn btn-primary shadow-primary btn-round btn-block waves-effect waves-light">masuk</button>
+			<div class="form-group">
+				<div class="position-relative has-icon-left">
+					<label for="exampleInputUsername" class="sr-only">NIK</label>
+						<input name="nik" type="number" id="exampleInputUsername" class="form-control" placeholder="Masukan NIK" autocomplete="off" required>
+						<div class="form-control-position">
+							<i class="pe-7s-id"></i>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="position-relative has-icon-left">
+					<label for="exampleInputPassword" class="sr-only">Nama lengkap</label>
+					<input name="nama_lengkap" type="text" id="exampleInputPassword" class="form-control" placeholder="Masukan Nama Lengkap" autocomplete="off" required>
+					<div class="form-control-position">
+						<i class="pe-7s-users"></i>
+					</div>
+				</div>
+			</div>
+			<br>
+			  <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">masuk</button>
 			  	<div class="text-center pt-3">
                 	<hr>
 					<p class="text-muted">Belum Punya akun? <a href="register.php">Daftar Akun Baru </a></p>
@@ -69,6 +77,14 @@
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  	<!-- simplebar js -->
+	<script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- waves effect js -->
+  <script src="assets/js/waves.js"></script>
+	<!-- sidebar-menu js -->
+	<script src="assets/js/sidebar-menu.js"></script>
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
   
   <script src="assets/js/sweetalert2@11.js"></script>
 <?php if(isset($_SESSION['success'])) { ?>

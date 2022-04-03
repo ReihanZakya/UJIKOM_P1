@@ -12,7 +12,7 @@ if(in_array($format,$file)){    //jika data ditemukan
     header("Location:user.php");
     die;
 }else{  //jika data tidak ditemukan 
-    $_SESSION['error'] = 'NIK Tidak Ditemukan';
+    $_SESSION['error'] = 'NIK tidak ditemukan silahkan daftar akun terlebih dahulu';
     header('Location:index.php');
     die;
     ?>

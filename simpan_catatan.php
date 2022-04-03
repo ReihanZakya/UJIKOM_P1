@@ -4,8 +4,8 @@ session_start();
 $year = $_POST['tanggal'];
 $getOnlyear = date('Y', strtotime($year)); // TAHUN
 $dateNow = date('Y');
-if ($getOnlyear < $dateNow) {
-   $_SESSION['error'] = "Tahun Tidak Sesuai";
+if ($getOnlyear != $dateNow) {
+   $_SESSION['error'] = "Tahun tidak sesuai";
     header("Location: user.php?url=tulis_catatan");
     die;
 }
